@@ -1,0 +1,15 @@
+include "./common.fbs";
+
+namespace WebView.EthersCommand;
+
+table SetProviderInput {
+  provider_key:string;
+  url:string;
+}
+
+table SetProviderOutput {
+  provider_key:string;
+  status:bool;
+}
+
+// 이것은 뭘 등록한다

@@ -1,0 +1,13 @@
+include "./common.fbs";
+
+namespace WebView.EthersCommand;
+
+table GetBalanceInput {
+  provider_key:string;
+  address:string;
+}
+
+table GetBalanceOutput {
+  provider_key:string;
+  balance:BigInt;
+}

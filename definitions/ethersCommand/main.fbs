@@ -1,0 +1,14 @@
+include "./getBalance.fbs";
+include "./setProvider.fbs";
+
+// test
+// namespace WebView.EthersCommand;
+
+// table Command {
+//   getBalanceInput: GetBalanceInput;
+//   getBalanceOutput: GetBalanceOutput;
+//   setProviderInput: SetProviderInput;
+//   setProviderOutput: SetProviderOutput;
+// }
+
+// root_type Command;
