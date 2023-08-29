@@ -63,7 +63,7 @@ jobs:
                 },
                 name: `kotlin-${process.env.RELEASE_ID}.zip`,
                 owner: context.repo.owner,
-                release_id: process.env.RELEASE_ID
+                release_id: process.env.RELEASE_ID,
                 repo: context.repo.repo,
               });
 
@@ -74,7 +74,7 @@ jobs:
                 },
                 name: `swift-${process.env.RELEASE_ID}.zip`,
                 owner: context.repo.owner,
-                release_id: process.env.RELEASE_ID
+                release_id: process.env.RELEASE_ID,
                 repo: context.repo.repo,
               });
 
