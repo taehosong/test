@@ -12,12 +12,9 @@ jobs:
     runs-on: "ubuntu-latest"
 
     steps:
+      - uses: "actions/checkout@v3"
       - name: "Determine tag"
         run: "echo \"RELEASE_TAG=${GITHUB_REF#refs/tags/}\" >> $GITHUB_ENV"
-
-      - name: "Prepare"
-        uses: "actions/checkout@v2"
-
       - name: "flatbuffer transform"
       - run: ./tools/flatc --kotlin --gen-all -o kotlin definitions/ethersCommand/main.fbs
       - run: ./tools/flatc --swift --gen-all -o swift definitions/ethersCommand/main.fbs
