@@ -61,7 +61,7 @@ jobs:
                 headers: {
                   'content-type': 'application/zip',
                 },
-                name: `kotlin-${process.env.RELEASE_ID}.zip`,
+                name: `kotlin-${process.env.RELEASE_TAG}.zip`,
                 owner: context.repo.owner,
                 release_id: process.env.RELEASE_ID,
                 repo: context.repo.repo,
@@ -72,7 +72,7 @@ jobs:
                 headers: {
                   'content-type': 'application/zip',
                 },
-                name: `swift-${process.env.RELEASE_ID}.zip`,
+                name: `swift-${process.env.RELEASE_TAG}.zip`,
                 owner: context.repo.owner,
                 release_id: process.env.RELEASE_ID,
                 repo: context.repo.repo,
