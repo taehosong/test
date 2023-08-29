@@ -15,9 +15,13 @@ jobs:
       - uses: "actions/checkout@v3"
       - name: "Determine tag"
         run: "echo \"RELEASE_TAG=${GITHUB_REF#refs/tags/}\" >> $GITHUB_ENV"
-      - name: "flatbuffer transform"
-      - run: ./tools/flatc --kotlin --gen-all -o kotlin definitions/ethersCommand/main.fbs
-      - run: ./tools/flatc --swift --gen-all -o swift definitions/ethersCommand/main.fbs
+
+      - name: "flatbuffer kotlin"
+        run: ./tools/flatc --kotlin --gen-all -o kotlin definitions/ethersCommand/main.fbs
+
+      - name: "flatbuffer swift"
+        run: ./tools/flatc --swift --gen-all -o swift definitions/ethersCommand/main.fbs
+
       - run: cp -r web kotlin/
       - run: cp -r web swift/
       - run: zip -r kotlin.zip kotlin
